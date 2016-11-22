@@ -2,7 +2,7 @@ from os import listdir
 from os.path import isfile, join
 import re
 
-mypath = "/Users/ale/galaxus"
+mypath = "/Users/vcz/galaxus"
 myfiles = [f for f in listdir(mypath) if isfile(join(mypath, f)) and "html" in f]
 
 for f in myfiles:
@@ -12,5 +12,5 @@ for f in myfiles:
 	    if match:
 	        datetime = f[:-5].split('_')
 	        datetime[1] = datetime[1].replace('-',':')
-	        print datetime[0] + ' ' + datetime[1] + ', ' + ', '.join([i for i in match.groups()])
+	        print datetime[0] + ', ' + datetime[1] + ', ' + ', '.join([i for i in match.groups()])
         
